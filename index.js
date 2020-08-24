@@ -1,50 +1,33 @@
-// const express = require("express");
-// const bodyParser = require("body-parser");
-// const exphbs = require("express-handlebars");
-// const path = require("path");
-// const cookieParser = require("cookie-parser")
-// const nodemailer = require("nodemailer");
-
-// const app = express();
-
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
-// app.use(cookieParser());
-
-// app.post("/api/sendMail", (req, res) => {})
-
-
-/////////////
-///////////
-/////////////
-
-
 const express = require("express");
 const bodyParser = require("body-parser");
-// const exphbs = require("express-handlebars");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const nodemailer = require("nodemailer");
+const request = require("request");
+const exphbs = require("express-handlebars");
+require('dotenv').config();
+
+// Environment variables
+const email = process.env.EMAIL;
+const password = process.env.EMAIL_PASSWORD;
+const mailchimpListId = process.env.MAILCHIMP_LIST_ID;
+const mailchimpApiKey = process.env.MAILCHIMP_API_KEY;
 
 const app = express();
 
-// View engine setup
-// app.engine("handlebars", exphbs());
-// app.set("view engine", "handlebars");
+// // View engine setup
+app.engine("handlebars", exphbs());
+app.set("view engine", "handlebars");
 
-// Static folder
-// app.use("/public", express.static(path.join(__dirname, "public")));
 
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
-
+// Contact Form
 app.post("/api/sendMail", (req, res) => {
+
   const output = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
@@ -65,12 +48,12 @@ app.post("/api/sendMail", (req, res) => {
     secure: false, // true for 465, false for other ports
     requireTLS: true,
     auth: {
-      user: 'toshiKtest@gmail.com', // generated ethereal user
-      pass: '12q7m9pr', // generated ethereal password
+      user: email, // generated ethereal user
+      pass: password, // generated ethereal password
     },
     tls: {
-        rejectUnauthorized: false
-    }
+      rejectUnauthorized: false,
+    },
   });
 
    // send mail with defined transport object
@@ -84,14 +67,87 @@ app.post("/api/sendMail", (req, res) => {
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      return console.log(error);
-    }
-
-    res.render("/client/src/components/Contact.js", {
-      msg: "Email has been sent",
+    request(options, (err, response, body) => {
+      if (err) {
+        res.redirect("/components/404");
+      } else {
+        if (response.statusCode === 200) {
+          res.redirect("/components/Home.js");
+        } else {
+          res.redirect("/components/404");
+        }
+      }
     });
   });
 })
 
-app.listen(5000, () => console.log("Server started..."));
+
+
+/////////////////////////////////
+// MAILCHIMP
+
+// static folder
+
+// Bodyparser Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cookieParser());
+
+// Static folder
+app.use(express.static(path.join(__dirname, "client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build/index.html"))
+});
+
+// Signup Route
+app.post("/api/signup", (req, res) => {
+  const { firstName, lastName, email } = req.body;
+
+  console.log(firstName + " " + lastName + " " + email)
+  // Make sure fields are filled
+  if (!firstName || !lastName || !email) {
+    console.log('fail');
+    return;
+  }
+
+  const data = {
+    members: [
+      {
+        email_address: email,
+        status: "subscribed",
+        merge_fields: {
+          FNAME: firstName,
+          LNAME: lastName,
+        },
+      },
+    ],
+  };
+
+  const postData = JSON.stringify(data);
+
+  const options = {
+    url: `https://us17.api.mailchimp.com/3.0/lists/${mailchimpListId}`,
+    method: "POST",
+    headers: {
+      Authorization: `auth ${mailchimpApiKey}`,
+    },
+    body: postData,
+  };
+
+  request(options, (err, response, body) => {
+    if (err) {
+      res.redirect("/components/404");
+    } else {
+      if (response.statusCode === 200) {
+        res.redirect("/components/Home.js");
+      } else {
+        res.redirect("/components/404");
+      }
+    }
+  });
+});
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
