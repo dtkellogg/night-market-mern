@@ -1,0 +1,3 @@
+[submodule "night-market-mern"]
+	path = night-market-mern
+	url = https://github.com/dtkellogg/night-market-mern.git
