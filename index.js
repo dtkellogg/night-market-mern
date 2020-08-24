@@ -94,10 +94,10 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 // Static folder
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "NM2/build")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build/index.html"))
+  res.sendFile(path.join(__dirname, "NM2/build/index.html"))
 });
 
 // Signup Route
