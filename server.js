@@ -5,7 +5,17 @@ const cookieParser = require("cookie-parser");
 const nodemailer = require("nodemailer");
 const request = require("request");
 const exphbs = require("express-handlebars");
-require('dotenv').config();
+const cors = require("cors")
+const connectDB = require("./config/db")
+
+// Load environment variables
+require('dotenv').config({ path: './config/config.env'});
+
+// Connect to database
+connectDB()
+
+
+const app = express();
 
 // Environment variables
 const email = process.env.EMAIL;
@@ -13,11 +23,9 @@ const password = process.env.EMAIL_PASSWORD;
 const mailchimpListId = process.env.MAILCHIMP_LIST_ID;
 const mailchimpApiKey = process.env.MAILCHIMP_API_KEY;
 
-const app = express();
-
 // // View engine setup
-app.engine("handlebars", exphbs());
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs());
+// app.set("view engine", "handlebars");
 
 
 // Body Parser Middleware
@@ -25,64 +33,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-// Contact Form
-app.post("/api/sendMail", (req, res) => {
-
-  const output = `
-    <p>You have a new contact request</p>
-    <h3>Contact Details</h3>
-    <ul>
-      <li>Name: ${req.body.name}</li>
-      <li>Email: ${req.body.email}</li>
-      <li>Phone: ${req.body.phone}</li>
-      <li>Company: ${req.body.subject}</li>
-    </ul>
-    <h3>Message</h3>
-    <p>${req.body.message}</p>
-  `;
-
-  // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    requireTLS: true,
-    auth: {
-      user: email, // generated ethereal user
-      pass: password, // generated ethereal password
-    },
-    tls: {
-      rejectUnauthorized: false,
-    },
-  });
-
-   // send mail with defined transport object
-    let mailOptions = {
-        from: '"Nodemailer Contact" <toshiKtest@gmail.com>', // sender address
-        to: "dtkellogg10@gmail.com", // list of receivers
-        subject: "Node Contact Request", // Subject line
-        text: "Hello world?", // plain text body
-        html: output, // html body
-    };
-
-  // send mail with defined transport object
-  transporter.sendMail(mailOptions, (error, info) => {
-    request(options, (err, response, body) => {
-      if (err) {
-        res.redirect("/components/404");
-      } else {
-        if (response.statusCode === 200) {
-          res.redirect("/components/Home.js");
-        } else {
-          res.redirect("/components/404");
-        }
-      }
-    });
-  });
-})
+// Routes
+// app.use('/api/v1/team', require('./routes/team'))
+app.use('/api/v1/messages', require('./routes/messages'))
 
 
-
+////////////
 /////////////////////////////////
 // MAILCHIMP
 
@@ -137,7 +93,7 @@ app.post("/api/signup", (req, res) => {
 
   request(options, (err, response, body) => {
     if (err) {
-      res.redirect("/components/404");
+      s
     } else {
       if (response.statusCode === 200) {
         res.redirect("/components/Home.js");
@@ -150,4 +106,4 @@ app.post("/api/signup", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
+app.listen(PORT, console.log(`Server started in ${process.env.NODE_ENV} mode on port ${PORT}`));
