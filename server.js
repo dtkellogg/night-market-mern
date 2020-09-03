@@ -18,7 +18,8 @@ connectDB()
 
 const app = express();
 
-socket = io.listen(process.env.PORT);
+// attempt with heroku...
+// socket = io.listen(process.env.PORT);
 
 // // // View engine setup
 // // app.engine("handlebars", exphbs());
