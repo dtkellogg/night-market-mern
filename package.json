@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node /backendNM2/server.js",
     "backend": "nodemon server.js",
     "frontend": "npm run start --prefix ../NM2",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix ../NM2\""
