@@ -1,0 +1,48 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "env-cmd": "^10.1.0",
+    "http-proxy-middleware": "^1.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0",
+    "react-iframe": "^1.8.0",
+    "react-map-gl": "^5.2.7",
+    "react-scripts": "3.4.3",
+    "react-stripe-checkout": "^2.6.3",
+    "react-transition-group": "^4.4.1",
+    "slug": "^3.3.4",
+    "slugify": "^1.4.5"
+  },
+  "scripts": {
+    "start": "env-cmd -f ./config/myvar.env react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000/",
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
