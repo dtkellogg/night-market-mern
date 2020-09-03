@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const MessageSchema = new mongoose.Schema({
   message: {
     type: String,
-    unique: true,
+    // unique: true,
     required: [true, "Please add a message"],
   },
   name: {
@@ -12,7 +12,7 @@ const MessageSchema = new mongoose.Schema({
     // required: [true, "Please add a store ID"],
     trim: true,
     unique: false,
-    maxlength: [10, "Store ID must be less than 10 chars"],
+    maxlength: [20, "Name must be less than 20 chars"],
   },
   email: {
     type: String,

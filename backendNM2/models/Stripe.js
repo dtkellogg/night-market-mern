@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 // const geocoder = require("../utils/geocoder")
 
-const MessageSchema = new mongoose.Schema({
+const StripeSchema = new mongoose.Schema({
   message: {
     type: String,
     unique: true,
@@ -31,19 +31,5 @@ const MessageSchema = new mongoose.Schema({
   },
 });
 
-// // Geocode & create location middleware
-// This makes it so any data that is added to the db will have it's location converted to geocode right before its added to the db
-// StoreSchema.pre("save", async function (next) {
-//   const loc = await geocoder.geocode(this.address);
-//   this.location = {
-//     type: "Point",
-//     coordinates: [loc[0].longitude, loc[0].latitude],
-//     formattedAddress: loc[0].formattedAddress,
-//   };
 
-//   // Do not save address
-//   this.address = undefined;
-//   next();
-// });
-
-module.exports = mongoose.model("Message", MessageSchema);
+module.exports = mongoose.model("Stripe", StripeSchema);

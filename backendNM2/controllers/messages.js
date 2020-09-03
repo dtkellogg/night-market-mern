@@ -2,10 +2,12 @@ const nodemailer = require("nodemailer");
 const request = require("request");
 
 // Environment variables
-const email = process.env.EMAIL;
-const password = process.env.EMAIL_PASSWORD;
+const emailFrom = process.env.NODEMAILER_FROM_EMAIL;
+const emailTo = process.env.NODEMAILER_TO_EMAIL;
+const password = process.env.NODEMAILER_EMAIL_PASSWORD;
+const host = process.env.NODEMAILER_HOST
 
-
+// Model
 const Message = require("../models/Message");
 
 // @desc  Create a message
@@ -15,13 +17,12 @@ exports.sendMessageToDb = async (req, res, next) => {
   try {
     // req.body gives the object that was sent for the post request
     const message = await Message.create(req.body);
-
-    console.log(message)
     
-      res.status(201).json({
+    res.status(201).json({
       success: true,
       data: message, 
     })
+
     next();
   } catch (err) {
     console.error(err);
@@ -52,12 +53,12 @@ exports.sendMessageToNodeMailer = async (req, res, next) => {
 
       // create reusable transporter object using the default SMTP transport
       let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
+        host: host,
         port: 587,
         secure: false, // true for 465, false for other ports
         requireTLS: true,
         auth: {
-          user: email, // generated ethereal user
+          user: emailFrom, // generated ethereal user
           pass: password, // generated ethereal password
         },
         tls: {
@@ -67,8 +68,8 @@ exports.sendMessageToNodeMailer = async (req, res, next) => {
 
       // send mail with defined transport object
       let mailOptions = {
-        from: '"Nodemailer Contact" <toshiKtest@gmail.com>', // sender address
-        to: "dtkellogg10@gmail.com", // list of receivers
+        from: `"Nodemailer Contact" <${emailFrom}>`, // sender address
+        to: `${emailTo}`, // list of receivers
         subject: "Node Contact Request", // Subject line
         text: "Hello world?", // plain text body
         html: output, // html body
@@ -95,8 +96,7 @@ exports.sendMessageToNodeMailer = async (req, res, next) => {
 };
 
 exports.response = async (req, res, next) => {
-  try {
-  console.log('Complete. In third middleware')
+  try { console.log('Complete. In third middleware')
 
   res.status(201).json({
   success: true,

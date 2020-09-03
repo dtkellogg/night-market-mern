@@ -6,106 +6,83 @@ const nodemailer = require("nodemailer");
 const request = require("request");
 const exphbs = require("express-handlebars");
 const cors = require("cors")
+const { v4: uuid } = require("uuid");
 const connectDB = require("./config/db")
+// const stripe = require("stripe")(stripe_key);
 
-// Load environment variables
+// // Load environment variables
 require('dotenv').config({ path: './config/config.env'});
 
-// Connect to database
+// // Connect to database
 connectDB()
-
 
 const app = express();
 
-// Environment variables
-const email = process.env.EMAIL;
-const password = process.env.EMAIL_PASSWORD;
-const mailchimpListId = process.env.MAILCHIMP_LIST_ID;
-const mailchimpApiKey = process.env.MAILCHIMP_API_KEY;
-
-// // View engine setup
-// app.engine("handlebars", exphbs());
-// app.set("view engine", "handlebars");
+// // // View engine setup
+// // app.engine("handlebars", exphbs());
+// // app.set("view engine", "handlebars");
 
 
-// Body Parser Middleware
+// // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-// Routes
-// app.use('/api/v1/team', require('./routes/team'))
+// // Routes
 app.use('/api/v1/messages', require('./routes/messages'))
+app.use('/api/v1/subscribers', require('./routes/subscribers'))
+// app.use('/api/v1/stripe', require("./routes/stripe"))
 
 
-////////////
-/////////////////////////////////
-// MAILCHIMP
+////////////////////
+//// Stripe
 
-// static folder
+// const { v4: uuid } = require("uuid");
+const stripe_key = process.env.STRIPE_KEY;
+// const Stripe = require("../models/Stripe");
 
-// Bodyparser Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(cookieParser());
+// const stripe = process.env.STRIPE_KEY;
+const stripe = require("stripe")(stripe_key);
 
-// Static folder
-app.use(express.static(path.join(__dirname, "../NM2/build")));
+// middleware
+app.use(express.json());
+app.use(cors());
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../NM2/build/index.html"))
-});
+app.post("/api/v1/stripe", (req, res) => {
+  // console.log(`In stripe backend ${req.body} and ${req.body[0]}`);
+  const { product, token } = req.body;
+  console.log("PRODUCT", product);
+  console.log("PRICE", product.price);
+  const idempontencyKey = uuid();
 
-// Signup Route
-app.post("/api/signup", (req, res) => {
-  const { firstName, lastName, email } = req.body;
-
-  console.log(`New subscriber: ${firstName} ${lastName}, ${email}`)
-  // Make sure fields are filled
-  if (!firstName || !lastName || !email) {
-    console.log('fail');
-    return;
-  }
-
-  const data = {
-    members: [
-      {
-        email_address: email,
-        status: "subscribed",
-        merge_fields: {
-          FNAME: firstName,
-          LNAME: lastName,
+  return stripe.customers
+    .create({
+      email: token.email,
+      source: token.id,
+    })
+    .then((customers) => {
+      stripe.charges.create(
+        {
+          amount: product.price * 100,
+          currency: "usd",
+          customer: customers.id,
+          receipt_email: token.email,
+          description: `purchase of ${product.name}`,
+          shipping: {
+            name: token.card.name,
+            address: {
+              country: token.card.address_country,
+            },
+          },
         },
-      },
-    ],
-  };
-
-  const postData = JSON.stringify(data);
-
-  const options = {
-    url: `https://us17.api.mailchimp.com/3.0/lists/${mailchimpListId}`,
-    method: "POST",
-    headers: {
-      Authorization: `auth ${mailchimpApiKey}`,
-    },
-    body: postData,
-  };
-
-  console.log(options)
-
-  request(options, (err, response, body) => {
-    console.log('Data sent to mailchimp')
-    if (err) {
-      console.log(err)
-    } else {
-      if (response.statusCode === 200) {
-        res.redirect("/components/Home.js");
-      } else {
-        res.redirect("/components/404");
-      }
-    }
-  });
+        { idempontencyKey }
+      );
+    })
+    .then((result) => res.status(200).json(result))
+    .catch((err) => console.log(err));
 });
+
+///////////////
 
 const PORT = process.env.PORT || 5000;
 
