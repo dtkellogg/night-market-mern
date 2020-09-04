@@ -28,12 +28,12 @@ const app = express();
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
 // Set static folder
-app.use(express.static('app/NM2/build'));
+app.use(express.static('NM2/build'));
 
 // Express serve up index.html file if it doesn't recognize route
 // const path = require('path');
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'app', 'NM2', 'build', 'index.html'));
+  res.sendFile(path.resolve(__dirname, 'NM2', 'build', 'index.html'));
 });
 }
 
