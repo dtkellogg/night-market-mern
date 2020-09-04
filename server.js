@@ -7,11 +7,11 @@ const request = require("request");
 const exphbs = require("express-handlebars");
 const cors = require("cors")
 const { v4: uuid } = require("uuid");
-const connectDB = require("./app/config/db")
+const connectDB = require("./config/db")
 // const stripe = require("stripe")(stripe_key);
 
 // // Load environment variables
-require('dotenv').config({ path: './app/config/config.env'});
+require('dotenv').config({ path: './config/config.env'});
 
 // // Connect to database
 connectDB()
@@ -44,8 +44,8 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 // // Routes
-app.use('/api/v1/messages', require('./app/routes/messages'))
-app.use('/api/v1/subscribers', require('./app/routes/subscribers'))
+app.use('/api/v1/messages', require('./routes/messages'))
+app.use('/api/v1/subscribers', require('./routes/subscribers'))
 // app.use('/api/v1/stripe', require("./routes/stripe"))
 
 
