@@ -1,6 +1,0 @@
-[submodule "night-market-mern"]
-	path = night-market-mern
-	url = https://github.com/dtkellogg/night-market-mern.git
-[submodule "NM2"]
-	path = NM2
-	url = https://github.com/dtkellogg/NM2.git

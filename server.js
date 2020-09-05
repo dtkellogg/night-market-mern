@@ -26,22 +26,27 @@ const app = express();
 // // app.set("view engine", "handlebars");
 
 // Serve static assets in production
-if (process.env.NODE_ENV === 'production') {
-// Set static folder
-app.use(express.static('NM2/build'));
+// if (process.env.NODE_ENV === 'production') {
+// // Set static folder
+// app.use(express.static('NM2/build'));
 
-// Express serve up index.html file if it doesn't recognize route
+// // Express serve up index.html file if it doesn't recognize route
 // const path = require('path');
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'NM2', 'build', 'index.html'));
-});
-}
 
+// }
 
 // // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+
+
+// Sep 6/5... THIS IS WHY NODE WASN'T CONNECTING & port 5000 err w get req
+app.use(express.static(path.join(__dirname, "NM2/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'NM2/build/index.html'));
+});
 
 // // Routes
 app.use('/api/v1/messages', require('./routes/messages'))
