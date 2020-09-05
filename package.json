@@ -11,7 +11,7 @@
     "backend": "nodemon server.js",
     "frontend": "npm run start --prefix NM2",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix NM2\"",
-    "heroku-postbuild": "cd NM2 && npm install && npm run build"
+    "heroku-postbuild": "cd .. && cd NM2 && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
