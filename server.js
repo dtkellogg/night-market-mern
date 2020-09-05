@@ -42,10 +42,11 @@ app.use(cookieParser());
 
 
 // Sep 6/5... THIS IS WHY NODE WASN'T CONNECTING & port 5000 err w get req
-app.use(express.static(path.join(__dirname, "NM2/build")));
+// app.use(express.static(path.join(__dirname, "NM2/build")));
+app.use(express.static(path.join(__dirname, "NM2", "build")));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'NM2/build/index.html'));
+  res.sendFile(path.join(__dirname, "NM2", "build", "index.html"));
 });
 
 // // Routes
