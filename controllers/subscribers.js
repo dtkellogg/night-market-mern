@@ -70,7 +70,7 @@ exports.sendSubscriberToMailChimp = async (req, res, next) => {
           console.log(err)
       } else {
         if (response.statusCode === 200) {
-          // res.redirect("/components/Home.js");
+          // res.redirect("/components/Home.js")
           next();
         } else {
           res.redirect("/components/404");
