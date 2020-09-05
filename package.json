@@ -11,7 +11,7 @@
     "backend": "nodemon server.js",
     "frontend": "npm run start --prefix NM2",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix NM2\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix __dirname/NM2 && npm run build --prefix __dirname/NM2"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
 
   },
   "keywords": [],
