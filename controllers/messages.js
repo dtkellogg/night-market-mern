@@ -11,7 +11,7 @@ const host = process.env.NODEMAILER_HOST
 const Message = require("../models/Message");
 
 // @desc  Create a message
-// @route POST /api/v1/messages
+// @route POST /api/v1/message
 // @access NM2
 exports.sendMessageToDb = async (req, res, next) => {
   try {
