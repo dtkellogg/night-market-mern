@@ -1,2 +1,9 @@
 config/
 
+config.env
+
+./config/config.env
+/config/config.env
+
+
+
