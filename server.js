@@ -35,6 +35,8 @@ const app = express();
 
 // }
 
+app.use(cors());
+
 // // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -77,7 +79,7 @@ const stripe = require("stripe")(stripe_key);
 
 // middleware
 app.use(express.json());
-app.use(cors());
+
 
 app.post("/api/v1/stripe", (req, res) => {
   // console.log(`In stripe backend ${req.body} and ${req.body[0]}`);
