@@ -3,7 +3,9 @@ const mongoose = require("mongoose");
 //  To connect to Database
 const connectDB = async () => {
   try {
+    console.log(`Mongo uri: ${process.env.MONGO_URI}`)
     const conn = await mongoose.connect(process.env.MONGO_URI, {
+      
       // Mongoose options
       useCreateIndex: true,
       useUnifiedTopology: true,
