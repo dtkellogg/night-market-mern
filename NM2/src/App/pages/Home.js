@@ -34,7 +34,7 @@ export default function Home() {
             </div>
           </Stripe>
           <div className="btn__glow-container">
-            <button href="./Contact" className="btn__glow-item btn__glow-item-1">
+            <button href="./contact" className="btn__glow-item btn__glow-item-1">
               <span></span>
               <span></span>
               <span></span>
