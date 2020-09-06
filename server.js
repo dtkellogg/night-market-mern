@@ -7,7 +7,7 @@ const request = require("request");
 const exphbs = require("express-handlebars");
 const cors = require("cors")
 const { v4: uuid } = require("uuid");
-const connectDB = require("./db.js")
+const connectDB = require("./db/db")
 // const stripe = require("stripe")(stripe_key);
 
 // // Load environment variables
