@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const {
-  // sendMessageToDb,
+  sendMessageToDb,
   sendMessageToNodeMailer,
    response
 } = require("../controllers/messages");
@@ -12,7 +12,7 @@ router
   .route("/")
   // .get(getTeam)
   .post(
-    // sendMessageToDb,
+    sendMessageToDb,
      sendMessageToNodeMailer,
       response)
 
