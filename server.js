@@ -51,7 +51,7 @@ if(process.env.NODE_ENV === 'production') {
   });
 }
 
-// Sep 6/5... THIS IS WHY NODE WASN'T CONNECTING & port 5000 err w get req
+// Sep 6/5... THIS IS WHY NODE WASN'T CONNECTING & port 5000 err w get re
 // app.use(express.static(path.join(__dirname, "NM2/build")));
 // app.use(express.static(path.join(__dirname, "NM2", "build", "static")));
 
