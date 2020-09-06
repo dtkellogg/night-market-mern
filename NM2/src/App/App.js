@@ -7,9 +7,9 @@ import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import Map from "./components/Map";
 
-require('dotenv').config();
+// require('dotenv').config();
 
-console.log(process.env.REACT_APP_MAPBOX_TOKEN)
+console.log(`Mapbox Taken (app.js reactside): ${process.env.MAPBOX_TOKEN}`)
 
 // import group from "./img/svg/group.svg";
 

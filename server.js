@@ -11,7 +11,7 @@ const connectDB = require("./db/db")
 // const stripe = require("stripe")(stripe_key);
 
 // // Load environment variables
-require('dotenv').config({ path: './config/config.env'});
+// require('dotenv').config({ path: './config/config.env'});
 
 // // Connect to database
 connectDB()
