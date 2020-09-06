@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import Map from "./components/Map";
 
-require('dotenv').config({ path: '../../env'});
+require('dotenv').config();
 
 console.log(process.env.REACT_APP_MAPBOX_TOKEN)
 
