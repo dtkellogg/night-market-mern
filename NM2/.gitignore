@@ -1,6 +1,4 @@
 node_modules
-# .DS_Store
-# dist
-# .env
-# config
+.DS_Store
+.env
 # myvar.env
