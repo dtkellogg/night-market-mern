@@ -8,6 +8,7 @@ function DefaultLayout(props) {
     {/* "NPM_CONFIG_PRODUCTION=false npm install && npm run build" */}
         {/* "heroku-postbuild": "cd NM2 && npm install --only=dev && npm install && npm run build", */}
         {/* "NPM_CONFIG_PRODUCTION=false npm install --prefix NM2 && npm run build --prefix NM2", */}
+        {/* "cd NM2 && npm install --only=dev && npm install && npm run build" */}
   );
 }
 
