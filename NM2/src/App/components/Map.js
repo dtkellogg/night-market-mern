@@ -11,6 +11,8 @@ export default function Map() {
       zoom: 14.5,
     });  
 
+    console.log(`mapbox token: ${process.env.REACT_APP_MAPBOX_TOKEN}`)
+
     return (
       <div className="map">
         <ReactMapGL
