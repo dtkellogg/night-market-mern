@@ -18,9 +18,9 @@ export default function Map() {
         <ReactMapGL
           {...viewport}
           mapboxApiAccessToken={
-            process.env.REACT_APP_MAPBOX_TOKEN
+            "pk.eyJ1IjoiZHRrZWxsb2dnIiwiYSI6ImNrZWlzMW9jNDAwYW8yenBmcHM4azQ1NGUifQ.z29ERW4wAUvbgQkoa7By1A"
           }
-          mapStyle={process.env.REACT_APP_MAPBOX_STYLES}
+          mapStyle={"mapbox://styles/dtkellogg/ckeisrodw1jfy19uqag1jvobo"}
           onViewportChange={(viewport) => setViewport(viewport)}
           scrollZoom={false}
         >
