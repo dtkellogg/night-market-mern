@@ -12,7 +12,7 @@ router
   .route("/")
   // .get(getTeam)
   .post(
-    sendMessageToDb,
+    // sendMessageToDb,
      sendMessageToNodeMailer,
       response)
 
