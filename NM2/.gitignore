@@ -4,5 +4,5 @@ node_modules
 # .env
 # config
 # myvar.env
-/node_modules
+# /node_modules
 build
