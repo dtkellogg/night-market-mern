@@ -7,9 +7,9 @@ export default function Footer() {
     <div className="footer">
       <div className="footer__pre-space">
         <button
-          className="btn__scroll-top row"
+          className="btn__scroll-top"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          size={50}
+          // size={80}
         >
           Top &uarr;
         </button>
@@ -17,7 +17,7 @@ export default function Footer() {
 
       <div className="row footer-row-2">
         <div className="footer__about">
-          <h4 className="text-size-4 line-height-wide grey-light-5">About</h4>
+          <h4 className="text-size-4 line-height-wide grey-light-5 margin-bottom">About</h4>
           <a href="../about/">
             <h5 className="text-size-4_5 line-height-v-sm grey-light-8">
               About Us
@@ -35,7 +35,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="footer__about">
-          <h4 className="text-size-4 line-height-wide grey-light-5">
+          <h4 className="text-size-4 line-height-wide grey-light-5 margin-bottom">
             Get Involved
           </h4>
           <a href="../contact/">
@@ -55,7 +55,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="footer__about">
-          <h4 className="text-size-4 line-height-wide grey-light-5">
+          <h4 className="text-size-4 line-height-wide grey-light-5 margin-bottom">
             Sponsors
           </h4>
           <a href="https://www.dickeys.com/">
@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__about">
-          <h4 className="text-size-4 line-height-wide grey-light-5">
+          <h4 className="text-size-4 line-height-wide grey-light-5 margin-bottom">
             Sponsors
           </h4>
           <a href="https://www.centene.com/">
@@ -104,10 +104,10 @@ export default function Footer() {
 
       <div className="row footer-row-3">
         <div className="footer__location_and_links">
-          <h3 className="text-size-3 line-height-wide grey-light-5">
+          <h3 className="text-size-3 line-height-wide grey-light-5 margin-bottom-lg">
             The Davis Night Market
           </h3>
-          <h4 className="text-size-4 line-height-wide grey-light-7">
+          <h4 className="text-size-4 line-height-sm grey-light-7">
             Mondays-Thursdays
           </h4>
           <h4 className="text-size-4 line-height-sm grey-light-7">

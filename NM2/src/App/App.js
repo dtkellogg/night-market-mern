@@ -27,7 +27,7 @@ export default function App() {
   return (
     <React.Fragment>
       <div className="container__main">
-      <Nav />
+        <Nav />
         <div class="stars"></div>
         <div class="twinkling"></div>
         <div class="clouds"></div>
@@ -51,9 +51,9 @@ export default function App() {
             </TransitionGroup>
           </React.Suspense>
         </div>
+        <Map />
+        <Footer className="footer" />
       </div>
-      <Map />
-      <Footer className="footer" />
     </React.Fragment>
   );
 }

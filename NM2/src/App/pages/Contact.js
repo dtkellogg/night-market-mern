@@ -75,11 +75,11 @@ export default function Contact() {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__header">
-        <h2 className="text-size-2 light-yellow">
+        <h2 className="text-size-2 light-yellow letter-spacing-lg">
           {/* Any Questions? */}
           Contact Us
         </h2>
-        <h3 className="text-size-3">Please leave us a message here</h3>
+        <h3 className="text-size-3 letter-spacing-sm">Please leave us a message here</h3>
         {submitted && (
           <p className="form__success-message--contact text-size-3">
             Email has been sent.
@@ -91,17 +91,10 @@ export default function Contact() {
             {failed}
           </p>
         )}
-        <button
-          className="btn btn__form btn__contact"
-          onClick={handleSubmit}
-          disabled={submitted || failed.length > 0}
-        >
-          Submit
-        </button>
       </div>
       <div className="form__content">
         <div className="form__element">
-          {/* <label>Name</label> */}
+          <label className="text-size-3 letter-spacing-md">Name:</label>
           <input
             type="text"
             className="form__input form__input-contact"
@@ -111,7 +104,7 @@ export default function Contact() {
           />
         </div>
         <div className="form__element">
-          {/* <label>Email</label> */}
+          <label className="text-size-3 letter-spacing-md">Email:</label>
           <input
             type="email"
             className="form__input form__input-contact"
@@ -121,7 +114,7 @@ export default function Contact() {
           />
         </div>
         <div className="form__element">
-          {/* <label>Phone Number</label> */}
+          <label className="text-size-3 letter-spacing-md">Phone Number:</label>
           <input
             type="text"
             className="form__input form__input-contact"
@@ -131,7 +124,7 @@ export default function Contact() {
           />
         </div>
         <div className="form__element">
-          {/* <label>Subject</label> */}
+          <label className="text-size-3 letter-spacing-md">Subject:</label>
           <input
             type="text"
             className="form__input form__input-contact"
@@ -141,7 +134,7 @@ export default function Contact() {
           />
         </div>
         <div className="form__element">
-          {/* <label>Message</label> */}
+          <label className="text-size-3 letter-spacing-md">Message:</label>
           <textarea
             type="text"
             className="form__textarea form__input form__input-contact"
@@ -150,6 +143,13 @@ export default function Contact() {
             onChange={(e) => setMessage(e.target.value)}
           />
         </div>
+        <button
+          className="btn btn__form btn__contact"
+          onClick={handleSubmit}
+          disabled={submitted || failed.length > 0}
+          >
+          Submit
+        </button>
       </div>
     </form>
   );

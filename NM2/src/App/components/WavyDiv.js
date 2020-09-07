@@ -1,11 +1,11 @@
 import React from "react";
 import "../../index.css";
 
-export default function WavyDiv({header, text}) {
+export default function WavyDiv({header, text, type}) {
     // console.log(text);
   return (
-    <>
-      <div className="wavy-div-container">
+    <React.Fragment>
+      <div className={`wavy-div-container wavy-container-size__${type}`}>
         <div className="wavy-div-box">
           <div className="wavy-div-content">
             <h3 className="text-size-3 margin-bottom">{header}</h3>
@@ -13,8 +13,8 @@ export default function WavyDiv({header, text}) {
           </div>
         </div>
       </div>
-      <svg>
-        <filter id="wavy">
+      <svg className="width-0">
+        <filter id="wavy" >
           <feTurbulence
             x="0"
             y="0"
@@ -32,6 +32,6 @@ export default function WavyDiv({header, text}) {
           <feDisplacementMap in="SourceGraphic" scale="30" />
         </filter>
       </svg>
-    </>
+    </React.Fragment>
   );
 }

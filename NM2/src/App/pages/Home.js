@@ -9,16 +9,16 @@ export default function Home() {
       <div className="hero__text-box-logo">
         <img src={logoMain} className="logo__home" alt="Main Logo" />
         <div className="nav__details">
-          <h3 className="text-size-3">Mondays - Thursdays</h3>
+          <h3 className="text-size-3 margin-bottom  letter-spacing-sm">Mondays - Thursdays</h3>
           <div className="line-height-sm">
-            <h4 className="text-size-4">9:00pm - 11:00pm</h4>
-            <h4 className="text-size-4">Central Park</h4>
-            <h4 className="text-size-4">5th St. & B St. Davis, CA</h4>
+            <h4 className="text-size-4  letter-spacing-sm">9:00pm - 11:00pm</h4>
+            <h4 className="text-size-4  letter-spacing-sm">Central Park</h4>
+            <h4 className="text-size-4  letter-spacing-sm">5th St. & B St. Davis, CA</h4>
           </div>
         </div>
       </div>
       <div className="hero__text-box-btns">
-        <h1 className="text-size-1 light-yellow">
+        <h1 className="text-size-1 light-yellow letter-spacing-md">
           <b>Nobody</b> goes to bed hungry.
         </h1>
         <div className="btn__header-container">

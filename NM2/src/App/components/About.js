@@ -6,16 +6,16 @@ export default function About() {
   return (
     <div className="about">
       <div className="about__header">
-        <h2 className="text-size-2 light-yellow">
+        <h2 className="text-size-2 light-yellow letter-spacing-lg">
           About the Davis Night Market
         </h2>
-        <h3 className="text-size-3">
+        <h3 className="text-size-3 letter-spacing-sm">
           Sustainable practices to fight food insecurity and waste
         </h3>
       </div>
       <div className="about__item">
-        <img src={Group} alt="About Pic" className="about__img" />
-        <div className="about__text">
+                <img src={Group} alt="About Pic" className="about__img" />
+        {/* <div className="about__text"> */}
           <WavyDiv
             header={
               "The Davis Night Market was established in 2019 in Davis, CA."
@@ -23,8 +23,9 @@ export default function About() {
             text={
               "Our mission is to reduce food waste and increase food security in Davis while fostering a sense of community."
             }
+            type={"about"}
           />
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ export default function Nav() {
               to="/"
               exact
               activeStyle={activeStyle}
-              className="nav-link text-size-3_5"
+              className="nav-link text-size-3_5 letter-spacing-sm"
             >
               Home
             </NavLink>
@@ -37,7 +37,7 @@ export default function Nav() {
             <NavLink
               to="/about"
               activeStyle={activeStyle}
-              className="nav-link text-size-3_5"
+              className="nav-link text-size-3_5 letter-spacing-sm"
             >
               About
             </NavLink>
@@ -46,7 +46,7 @@ export default function Nav() {
             <NavLink
               to="/media"
               activeStyle={activeStyle}
-              className="nav-link text-size-3_5"
+              className="nav-link text-size-3_5 letter-spacing-sm"
             >
               Media
             </NavLink>
@@ -55,7 +55,7 @@ export default function Nav() {
             <NavLink
               to="/team"
               activeStyle={activeStyle}
-              className="nav-link text-size-3_5"
+              className="nav-link text-size-3_5 letter-spacing-sm"
             >
               Team
             </NavLink>
@@ -64,7 +64,7 @@ export default function Nav() {
             <NavLink
               to="/contact"
               activeStyle={activeStyle}
-              className="nav-link text-size-3_5"
+              className="nav-link text-size-3_5 letter-spacing-sm"
             >
               Contact
             </NavLink>

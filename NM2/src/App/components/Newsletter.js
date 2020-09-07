@@ -67,7 +67,7 @@ export default function Contact() {
         Sign up for our newsletter
       </h3>
 
-      <div className="row align-items-flex-start margin-bottom-sm">
+      <div className="row align-items-flex-start margin-bottom">
         <input
           type="email"
           className="form__input form__input-footer"
@@ -101,7 +101,7 @@ export default function Contact() {
         <li className="social-media-icons__list-item icon facebook">
           <a href="https://www.facebook.com/davisnightmarket">
             <FaFacebookSquare
-              size={40}
+              size={50}
               color="var(--facebook)"
               fill="var(--facebook)"
               className="social-media-icon grey-light-7"
@@ -111,7 +111,7 @@ export default function Contact() {
         <li className="social-media-icons__list-item icon instagram">
           <a href="https://www.instagram.com/davisnightmarket/">
             <FaInstagram
-              size={40}
+              size={50}
               color="var(--instagram)"
               className="social-media-icon"
             />
@@ -120,7 +120,7 @@ export default function Contact() {
         <li className="social-media-icons__list-item icon twitter">
           <a href="https://twitter.com/DavisNightMrkt">
             <FaTwitter
-              size={40}
+              size={50}
               color="var(--twitter)"
               className="social-media-icon grey-light-7"
             />

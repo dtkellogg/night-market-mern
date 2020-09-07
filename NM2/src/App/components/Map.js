@@ -24,8 +24,8 @@ export default function Map() {
           onViewportChange={(viewport) => setViewport(viewport)}
           scrollZoom={false}
         >
-          <Marker latitude={38.546921} longitude={-121.745411}>
-            <div className="text-size-3">Davis Night Market</div>
+          <Marker latitude={38.546921} longitude={-121.750411}>
+            <div className="text-size-2">Davis Night Market</div>
             <button className="marker-btn">
               <img src={logo} className="Night Market Icon" alt="logo" />
             </button>
