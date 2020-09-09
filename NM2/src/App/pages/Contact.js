@@ -114,11 +114,11 @@ export default function Contact() {
           />
         </div>
         <div className="form__element">
-          <label className="text-size-3 letter-spacing-md">Phone Number</label>
+          <label className="text-size-3 letter-spacing-md">Phone</label>
           <input
             type="text"
             className="form__input form__input-contact"
-            placeholder="Your phone number"
+            placeholder="Phone number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />

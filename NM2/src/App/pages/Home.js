@@ -18,7 +18,7 @@ export default function Home() {
         </div>
       </div>
       <div className="hero__text-box-btns">
-        <h1 className="text-size-1 light-yellow letter-spacing-md">
+        <h1 className="text-size-1 light-yellow letter-spacing-md header">
           <b>Nobody</b> goes to bed hungry.
         </h1>
         <div className="btn__header-container">

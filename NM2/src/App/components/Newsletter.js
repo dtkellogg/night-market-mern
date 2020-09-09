@@ -97,7 +97,7 @@ export default function Contact() {
         </p>
       )}
 
-      <ul className="social-media-icons__list margin-bottom">
+      <ul className="social-media-icons__list margin-bottom-lg">
         <li className="social-media-icons__list-item icon facebook">
           <a href="https://www.facebook.com/davisnightmarket">
             <FaFacebookSquare
