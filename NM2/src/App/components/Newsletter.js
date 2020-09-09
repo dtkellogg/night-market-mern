@@ -67,7 +67,7 @@ export default function Contact() {
         Sign up for our newsletter
       </h3>
 
-      <div className="row align-items-flex-start margin-bottom">
+      <div className="subscription__input-and-btn margin-bottom">
         <input
           type="email"
           className="form__input form__input-footer"

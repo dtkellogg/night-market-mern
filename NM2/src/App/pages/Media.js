@@ -15,9 +15,7 @@ export default function Media() {
 
       <Iframe
         url="http://www.youtube.com/embed/xDMP3i36naA"
-        width="600px"
-        height="600px"
-        className="myClassname"
+        className="video"
         display="initial"
       />
       {/* <iframe
