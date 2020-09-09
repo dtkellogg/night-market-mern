@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="row footer-row-3">
+      <div className="footer-row-3">
         <div className="footer__location_and_links">
           <h3 className="text-size-3 line-height-wide grey-light-5 margin-bottom-lg">
             The Davis Night Market

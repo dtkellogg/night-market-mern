@@ -9,7 +9,7 @@ export default function About() {
         <h2 className="text-size-2 light-yellow letter-spacing-lg">
           About the Davis Night Market
         </h2>
-        <h3 className="text-size-3 letter-spacing-sm">
+        <h3 className="text-size-3 letter-spacing-sm margin-left-right-md">
           Sustainable practices to fight food insecurity and waste
         </h3>
       </div>

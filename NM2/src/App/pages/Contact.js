@@ -94,7 +94,7 @@ export default function Contact() {
       </div>
       <div className="form__content">
         <div className="form__element">
-          <label className="text-size-3 letter-spacing-md">Name:</label>
+          <label className="text-size-3 letter-spacing-md">Name</label>
           <input
             type="text"
             className="form__input form__input-contact"
@@ -104,17 +104,17 @@ export default function Contact() {
           />
         </div>
         <div className="form__element">
-          <label className="text-size-3 letter-spacing-md">Email:</label>
+          <label className="text-size-3 letter-spacing-md" for="email">Email</label>
           <input
             type="email"
             className="form__input form__input-contact"
-            placeholder="Your email address (required)"
+            placeholder="Your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="form__element">
-          <label className="text-size-3 letter-spacing-md">Phone Number:</label>
+          <label className="text-size-3 letter-spacing-md">Phone Number</label>
           <input
             type="text"
             className="form__input form__input-contact"
@@ -124,7 +124,7 @@ export default function Contact() {
           />
         </div>
         <div className="form__element">
-          <label className="text-size-3 letter-spacing-md">Subject:</label>
+          <label className="text-size-3 letter-spacing-md">Subject</label>
           <input
             type="text"
             className="form__input form__input-contact"
@@ -134,11 +134,11 @@ export default function Contact() {
           />
         </div>
         <div className="form__element">
-          <label className="text-size-3 letter-spacing-md">Message:</label>
+          <label className="text-size-3 letter-spacing-md" for="message">Message</label>
           <textarea
             type="text"
-            className="form__textarea form__input form__input-contact"
-            placeholder="Please enter your message here (required)"
+            className="form__textarea form__input form__input-contact-message"
+            placeholder="Please enter your message here"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />

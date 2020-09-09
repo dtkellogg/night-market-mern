@@ -23,6 +23,7 @@ export default function Map() {
           mapStyle={"mapbox://styles/dtkellogg/ckeisrodw1jfy19uqag1jvobo"}
           onViewportChange={(viewport) => setViewport(viewport)}
           scrollZoom={false}
+          showCompass={true}
         >
           <Marker latitude={38.546921} longitude={-121.750411}>
             <div className="text-size-2">Davis Night Market</div>

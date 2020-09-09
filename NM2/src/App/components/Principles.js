@@ -10,7 +10,7 @@ export default function Principle() {
       <div className="principles" id="#principles">
         <div className="principles__header">
           <h2 className="text-size-2 light-yellow">Our Principles</h2>
-          <p className="text-size-3">
+          <p className="text-size-3 margin-left-right-md">
             Sustainable practices to fight food insecurity and waste
           </p>
         </div>
