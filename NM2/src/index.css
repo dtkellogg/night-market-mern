@@ -1993,9 +1993,9 @@ a:nth-child(2) {
     width: 91.5%;
   }
 
-  .form {
-    height: 60rem;
-  }
+  /* .form__textarea {
+    height: 30rem;
+  } */
 
   .form__element {
     flex-direction: column;
@@ -2041,8 +2041,7 @@ a:nth-child(2) {
   }
 
   .hero {
-    padding-bottom: 50rem;
-    padding-top: 35rem;
+    height: 110vh;
   }
 }
 
