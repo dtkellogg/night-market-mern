@@ -8,7 +8,7 @@ export default function Media() {
     <div className="media">
       <div className="media__header">
         <h2 className="text-size-2 light-yellow letter-spacing-lg">Photo & Video Gallery</h2>
-        <h3 className="text-size-3 letter-spacing-sm">
+        <h3 className="text-size-3 letter-spacing-sm margin-left-right-md">
           Take a first hand look at what goes on at Night Market
         </h3>
       </div>
