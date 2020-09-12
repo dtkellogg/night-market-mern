@@ -1790,7 +1790,7 @@ a:nth-child(2) {
   }
 
   .involved__items-container {
-    height: 100vh
+    height: 200vh
   }
 
   .involved__item {
@@ -1989,8 +1989,8 @@ a:nth-child(2) {
       width: 100%;
   } */
   .btn__contact {
-    transform: translate(3.5rem, 26.8rem);
-    width: 91.5%;
+    transform: translate(2.0rem, 26.8rem);
+    width: 90.3%;
   }
 
   /* .form__textarea {
@@ -2007,6 +2007,11 @@ a:nth-child(2) {
 
   .form__input-contact {
     width: 100%;
+    /* margin: 0rem 0; */
+  }
+
+  .form__element {
+    margin: 2rem 0;
   }
 
   .form__input-contact-message {
@@ -2014,6 +2019,10 @@ a:nth-child(2) {
     height: 40rem;
     padding-bottom: 25rem;
 
+  }
+
+  .form {
+    height: 90rem;
   }
 }
 
