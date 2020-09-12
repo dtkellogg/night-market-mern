@@ -2046,11 +2046,19 @@ a:nth-child(2) {
 
   .btn__contact {
     width: 89%;
-    height: 15rem;
+    min-height: 5rem;
   }
 
   .hero {
     height: 110vh;
+  }
+
+  .sponsor__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
   }
 }
 

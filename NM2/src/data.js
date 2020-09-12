@@ -36,6 +36,7 @@ export const members = [
   {
     name: "Helena",
     avatar: require("./img/team/Helena.webp"),
+    avatarBackup: require("./img/team/Helena"),
   },
   {
     name: "Ernst",

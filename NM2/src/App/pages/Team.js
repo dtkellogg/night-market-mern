@@ -16,14 +16,19 @@ export default function Team() {
           <h3 className="text-size-3 letter-spacing-sm">Making the world better one dinner at a time</h3>
         </div>
         <ul className="team__list">
-          {members.map(({ name, avatar }) => {
+          {members.map(({ name, avatar, avatarBackup }) => {
             return (
               <li key={name} className="team__item">
-                <img
+                {/* <img
                   src={avatar}
                   alt="Teammember Avatar"
                   className="team__img"
-                />
+                  type="image/webp"
+                /> */}
+                <picture className="team__img">
+                  <source srcset={avatar} alt="Teammember Avatar" type="image/webp" className="team__img"/>
+                  <source srcset={avatarBackup} alt="Teammember Avatar" className="team__img" />
+                </picture>
                 <b></b>
                 <h3 className="text-size-3_5">{name}</h3>
               </li>
