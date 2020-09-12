@@ -35,8 +35,8 @@ export const sponsors = [
 export const members = [
   {
     name: "Helena",
-    avatar: require("./img/team/Helena.webp"),
-    avatarBackup: require("./img/team/Helena"),
+    avatar: require("./img/team/HelenaConverted.jpg"),
+    // avatarBackup: require("./img/team/Helena"),
   },
   {
     name: "Ernst",
