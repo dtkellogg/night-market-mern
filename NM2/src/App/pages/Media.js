@@ -14,7 +14,7 @@ export default function Media() {
       </div>
 
       <Iframe
-        url="http://www.youtube.com/embed/xDMP3i36naA"
+        url="//www.youtube.com/embed/xDMP3i36naA"
         className="video"
         display="initial"
       />

@@ -2000,12 +2000,8 @@ a:nth-child(2) {
     transform: translateX(-0.5rem);
   }
 
-  /* .btn__contact {
-      margin: 26rem 0 0 0;
-      width: 100%;
-  } */
   .btn__contact {
-    transform: translate(2.0rem, 32.5rem);
+    transform: translate(2.0rem, 33rem);
     width: 90.3%;
   }
 
@@ -2042,11 +2038,11 @@ a:nth-child(2) {
   }
 
   .form__fail-message--contact {
-    transform: translate(0rem, 72.5rem);
+    transform: translate(0rem, 71.5rem);
   }
 
   .form__success-message--contact {
-    transform: translate(0rem, 72.5rem);
+    transform: translate(0rem, 71.5rem);
   }
 }
 
