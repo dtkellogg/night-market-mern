@@ -14,22 +14,7 @@ export default function Principle() {
             Sustainable practices to fight food insecurity and waste
           </p>
         </div>
-        <div className="principles__item">
-          <img
-            src={Principle3}
-            alt="Principle Pic"
-            className="principles__img"
-          />
-          {/* <div className="principles__text"> */}
-            <WavyDiv
-              header={"Reducing Food Waste and Food Insecurity"}
-              text={
-                "The Davis Night Market recovers food that would otherwise go to waste from Davis restaurants, bakeries and grocery stores, and make it available for anyone in need."
-              }
-              type={"principles"}
-            />
-          {/* </div> */}
-        </div>
+        
         <div className="principles__item">
           <div className="#">
             <img
@@ -62,6 +47,24 @@ export default function Principle() {
               }
               type={"principles"}
             />
+          {/* </div> */}
+        </div>
+
+        <div className="principles__item">
+          <img
+            src={Principle3}
+            alt="Principle Pic"
+            className="principles__img"
+          />
+          {/* <div className="principles__text"> */}
+          <WavyDiv
+            header={"Reducing Food Waste and Food Insecurity"}
+            text={
+              "The Davis Night Market recovers food that would otherwise go to waste from Davis restaurants, bakeries and grocery stores, and make it available for anyone in need."
+            }
+            type={"principles"}
+            className="principles__item-3"
+          />
           {/* </div> */}
         </div>
       </div>

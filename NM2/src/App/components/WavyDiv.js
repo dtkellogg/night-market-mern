@@ -13,7 +13,7 @@ export default function WavyDiv({header, text, type}) {
           </div>
         </div>
       </div>
-      <svg className="width-0">
+      <svg className="width-0 height-0">
         <filter id="wavy" >
           <feTurbulence
             x="0"

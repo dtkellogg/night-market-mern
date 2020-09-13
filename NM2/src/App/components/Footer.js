@@ -117,7 +117,7 @@ export default function Footer() {
             Central Park
           </h4>
           <h4 className="text-size-4 line-height-sm grey-light-7">
-            325 C St. Davis, CA
+            4th St. & C St. Davis, CA
           </h4>
         </div>
         <Newsletter />

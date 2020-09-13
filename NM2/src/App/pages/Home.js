@@ -11,9 +11,9 @@ export default function Home() {
         <div className="nav__details">
           <h3 className="text-size-3 margin-bottom  letter-spacing-sm">Mondays - Thursdays</h3>
           <div className="line-height-sm">
-            <h4 className="text-size-4  letter-spacing-sm">9:00pm - 11:00pm</h4>
-            <h4 className="text-size-4  letter-spacing-sm">Central Park</h4>
-            <h4 className="text-size-4  letter-spacing-sm">5th St. & B St. Davis, CA</h4>
+            <h4 className="text-size-4 letter-spacing-sm">9:00pm - 11:00pm</h4>
+            <h4 className="text-size-4 letter-spacing-sm">Central Park</h4>
+            <h4 className="text-size-4 letter-spacing-sm">4th St. & C St. Davis, CA</h4>
           </div>
         </div>
       </div>
