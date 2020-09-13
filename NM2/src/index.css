@@ -1591,8 +1591,16 @@ a:nth-child(2) {
   }
 
   .principles__item {
-    padding: 3rem 0;
+    padding: 0;
     flex-direction: column;
+  }
+
+  .about {
+    padding: 5rem 0 0 0 ;
+  }
+
+  .principles {
+    padding: 0;
   }
 
   .about__item {
