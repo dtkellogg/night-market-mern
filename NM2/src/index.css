@@ -713,14 +713,14 @@ a {
 .form__success-message--contact {
   color: var(--green);
   position: absolute;
-  transform: translateY(11rem);
+  transform: translate(17rem, 61rem);
   /* animation: animate 3s ease-out; */
 }
 
 .form__fail-message--contact {
   color: var(--red);
   position: absolute;
-  transform: translateY(11rem);
+  transform: translate(17rem, 57rem);
   /* animation: animate 3s ease-out; */
 }
 
@@ -1698,6 +1698,14 @@ a:nth-child(2) {
   .form__content {
     padding: 0
   }
+
+  .form__fail-message--contact {
+    transform: translate(2rem, 55rem);
+  }
+
+  .form__success-message--contact {
+    transform: translate(2rem, 55rem);
+  }
 }
 
 @media (max-width: 950px) {
@@ -1840,6 +1848,14 @@ a:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+
+  .form__fail-message--contact {
+    transform: translate(0rem, 58rem);
+  }
+
+  .form__success-message--contact {
+    transform: translate(0rem, 58rem);
   }
 }
 
@@ -1989,7 +2005,7 @@ a:nth-child(2) {
       width: 100%;
   } */
   .btn__contact {
-    transform: translate(2.0rem, 26.8rem);
+    transform: translate(2.0rem, 32.5rem);
     width: 90.3%;
   }
 
@@ -2022,7 +2038,15 @@ a:nth-child(2) {
   }
 
   .form {
-    height: 90rem;
+    height: 110rem;
+  }
+
+  .form__fail-message--contact {
+    transform: translate(0rem, 72.5rem);
+  }
+
+  .form__success-message--contact {
+    transform: translate(0rem, 72.5rem);
   }
 }
 
@@ -2084,6 +2108,16 @@ a:nth-child(2) {
 @media (max-width: 425px) {
   .sponsor__item {
     margin: 2.5rem 1.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .form__fail-message--contact {
+    transform: translate(0rem, 73rem);
+  }
+
+  .form__success-message--contact {
+    transform: translate(0rem, 73rem);
   }
 }
 

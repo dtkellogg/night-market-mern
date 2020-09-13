@@ -79,7 +79,7 @@ export default function Contact() {
           {/* Any Questions? */}
           Contact Us
         </h2>
-        <h3 className="text-size-3 letter-spacing-sm">Please leave us a message here</h3>
+        <h3 className="text-size-3 letter-spacing-sm">Please leave us a message</h3>
         {submitted && (
           <p className="form__success-message--contact text-size-3">
             Email has been sent.
