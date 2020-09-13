@@ -40,51 +40,51 @@ export const members = [
   },
   {
     name: "Ernst",
-    avatar: require("./img/team/Ernst.webp"),
+    avatar: require("./img/team/ErnstConverted.jpg"),
   },
   {
     name: "Val",
-    avatar: require("./img/team/Val.webp"),
+    avatar: require("./img/team/ValConverted.jpg"),
   },
   {
     name: "Max",
-    avatar: require("./img/team/Max.webp"),
+    avatar: require("./img/team/MaxConverted.jpg"),
   },
   {
     name: "Ania",
-    avatar: require("./img/team/Ania.webp"),
+    avatar: require("./img/team/AniaConverted.jpg"),
   },
   {
     name: "Artie",
-    avatar: require("./img/team/Artie.webp"),
+    avatar: require("./img/team/ArtieConverted.jpg"),
   },
   {
     name: "Uta",
-    avatar: require("./img/team/Uta.webp"),
+    avatar: require("./img/team/UtaConverted.jpg"),
   },
 
   {
     name: "Hannah",
-    avatar: require("./img/team/Hannah.webp"),
+    avatar: require("./img/team/HannahConverted.jpg"),
   },
   {
     name: "Maria",
-    avatar: require("./img/team/Maria.webp"),
+    avatar: require("./img/team/MariaConverted.jpg"),
   },
   {
     name: "Xinyu",
-    avatar: require("./img/team/Xinyu.webp"),
+    avatar: require("./img/team/XinyuConverted.jpg"),
   },
   {
     name: "Sarah",
-    avatar: require("./img/team/Sarah.webp"),
+    avatar: require("./img/team/SarahConverted.jpg"),
   },
   {
     name: "Jordan",
-    avatar: require("./img/team/Jordan.webp"),
+    avatar: require("./img/team/JordanConverted.jpg"),
   },
   {
     name: "Evan",
-    avatar: require("./img/team/Evan.webp"),
+    avatar: require("./img/team/EvanConverted.jpg"),
   },
 ];
