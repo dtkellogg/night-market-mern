@@ -1,5 +1,5 @@
 import React from "react";
-import Group from "../../img/team/group1.webp";
+import Group from "../../img/team/group1Converted.jpg";
 import WavyDiv from "./WavyDiv"
 
 export default function About() {

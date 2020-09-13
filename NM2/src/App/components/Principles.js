@@ -1,7 +1,7 @@
 import React from 'react'
-import Principle1 from '../../img/team/principles_1.webp'
-import Principle2 from '../../img/team/principles_2.webp'
-import Principle3 from '../../img/team/principles_3.webp'
+import Principle1 from '../../img/team/principles_1_Converted.jpg'
+import Principle2 from '../../img/team/principles_2_Converted.jpg'
+import Principle3 from '../../img/team/principles_3_Converted.jpg'
 import WavyDiv from "./WavyDiv";
 
 
