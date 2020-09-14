@@ -368,6 +368,9 @@ a {
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/svg/hero.svg);
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   min-height: 99vh;
   background-attachment: fixed;
   position: relative;
@@ -2151,7 +2154,7 @@ a:nth-child(2) {
   }
 
   .hero {
-    height: 150vh;
+    height: 140vh;
     padding-bottom: 10rem;
   }
 
