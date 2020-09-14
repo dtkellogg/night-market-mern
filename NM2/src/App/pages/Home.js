@@ -34,17 +34,17 @@ export default function Home() {
               </button>
             </div>
           </Stripe>
-            <Link to="/contact">
-              <div className="btn__glow-container">
-                  <button className="btn__glow-item btn__glow-item-1">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Get in touch
-                  </button>
-              </div>
-            </Link>
+          <Link to="/contact">
+            <div className="btn__glow-container">
+                <button className="btn__glow-item btn__glow-item-1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Get in touch
+                </button>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

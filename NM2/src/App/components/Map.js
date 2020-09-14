@@ -23,11 +23,11 @@ export default function Map() {
           mapStyle={"mapbox://styles/dtkellogg/ckeisrodw1jfy19uqag1jvobo"}
           onViewportChange={(viewport) => setViewport(viewport)}
           scrollZoom={false}
-          // zoomEnabled={false}
+          zoomEnabled={false}
           // rotateEnabled={false}
           // touchZoomRotate={false}
           dragPan={false}
-          // drag={false}
+          drag={false}
           // userInteractionEnabled={'NO'}
           // showCompass={true}
         >
