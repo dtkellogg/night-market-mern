@@ -383,7 +383,7 @@ a {
 
 .hero__text-box-btns {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -1043,7 +1043,7 @@ a:nth-child(2) {
 /* ------------FOOTER------------ */
 /* ----------------------------------------- */
 .footer {
-  height: 70vh;
+  height: 100vh;
   width: 100%;
   bottom: 0;
   text-align: center;
@@ -1915,18 +1915,22 @@ a:nth-child(2) {
 
   .text-size-2 {
     font-size: 3.3rem;
+    line-height: 5rem;
   }
 
   .text-size-3 {
     font-size: 2.8rem;
+    line-height: 3.5rem;
   }
 
   .text-size-3_5 {
     font-size: 2.05rem;
+    line-height: 3rem;
   }
 
   .text-size-4 {
     font-size: 2.05rem;
+    line-height: 3rem;
   }
 
   .text-size-4_5 {
@@ -2181,6 +2185,10 @@ a:nth-child(2) {
   .involved__item:nth-child(3)
    {
     margin-top: 3rem;
+  }
+
+  .hero__text-box-btns {
+    flex-direction: column-reverse;
   }
 }
 

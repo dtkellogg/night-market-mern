@@ -12,7 +12,7 @@ export default function Team() {
       /> */}
       <div className="team__members">
         <div className="team__header">
-          <h2 className="text-size-2 light-yellow letter-spacing-lg">Meet our Lovely Team Members!</h2>
+          <h2 className="text-size-2 light-yellow letter-spacing-lg">Meet the Team</h2>
           <h3 className="text-size-3 letter-spacing-sm">Making the world better one dinner at a time</h3>
         </div>
         <ul className="team__list">

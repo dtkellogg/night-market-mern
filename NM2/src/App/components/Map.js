@@ -25,7 +25,7 @@ export default function Map() {
           scrollZoom={false}
           showCompass={true}
         >
-          <Marker latitude={38.546921} longitude={-121.750411}>
+          <Marker latitude={38.546731} longitude={-121.749011}>
             <div className="text-size-2">Davis Night Market</div>
             <button className="marker-btn">
               <img src={logo} className="Night Market Icon" alt="logo" />
