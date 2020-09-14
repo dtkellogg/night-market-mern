@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import logoMain from "../../img/svg/logo_main.svg";
 // import logoMain2 from "../../img/svg/logo_main_orange.svg";
 import Stripe from "../components/Stripe";
@@ -33,15 +34,17 @@ export default function Home() {
               </button>
             </div>
           </Stripe>
-          <div className="btn__glow-container">
-            <button href="./contact" className="btn__glow-item btn__glow-item-1">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Get in touch
-            </button>
-          </div>
+            <Link to="/contact">
+              <div className="btn__glow-container">
+                  <button className="btn__glow-item btn__glow-item-1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Get in touch
+                  </button>
+              </div>
+            </Link>
         </div>
       </div>
     </div>
