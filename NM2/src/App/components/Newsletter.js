@@ -86,12 +86,12 @@ export default function Contact() {
       </div>
 
       {submitted && (
-        <p className="form__success-message--newsletter">
+        <p className="form__success-message--newsletter text-size-4">
           Successfully registered for newsletter
         </p>
       )}
       {failedMessage.length > 0 && (
-        <p className="form__fail-message--newsletter">
+        <p className="form__fail-message--newsletter text-size-4">
           {/* Failed to register for newsletter. Please try again. */}
           {failedMessage}
         </p>

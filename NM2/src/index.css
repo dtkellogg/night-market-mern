@@ -710,14 +710,14 @@ a {
 .form__success-message--newsletter {
   color: var(--green);
   position: absolute;
-  transform: translateY(10.5rem)
+  transform: translateY(-3.5rem)
   /* animation: animate 3s ease-out; */
 }
 
 .form__fail-message--newsletter {
   color: var(--red);
   position: absolute;
-  transform: translateY(10.5rem)
+  transform: translateY(-3.5rem)
   /* animation: animate 3s ease-out; */
 }
 
@@ -1868,9 +1868,7 @@ a:nth-child(2) {
   .footer__logo {
     margin: 0 1.5rem 1.5rem 0;
   }
-}
 
-@media (max-width: 850px) {
   .team__members {
     padding: 5rem 0 15rem 0;
   }
@@ -1901,6 +1899,14 @@ a:nth-child(2) {
 
   .form__success-message--contact {
     transform: translate(0rem, 58rem);
+  }
+
+  .form__success-message--newsletter {
+    transform: translateY(-3rem)
+  }
+
+  .form__fail-message--newsletter {
+    transform: translateY(-3rem)
   }
 }
 
@@ -2142,11 +2148,11 @@ a:nth-child(2) {
   }
 
   .form__fail-message--contact {
-    transform: translate(0rem, 71.5rem);
+    transform: translate(0rem, 71.0rem);
   }
 
   .form__success-message--contact {
-    transform: translate(0rem, 71.5rem);
+    transform: translate(0rem, 71.0rem);
   }
 
   .about-page {
