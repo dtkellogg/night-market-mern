@@ -383,7 +383,7 @@ a {
 
 .hero__text-box-btns {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
@@ -2133,7 +2133,7 @@ a:nth-child(2) {
 @media (max-width: 500px) {
   .btn__header-container {
     flex-direction: column;
-    transform: translateY(80%);
+    /* transform: translateY(80%); */
   }
 
   .btn__glow-item {
