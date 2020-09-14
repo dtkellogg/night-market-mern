@@ -2268,11 +2268,11 @@ a:nth-child(2) {
 
 @media (max-width: 400px) {
   .form__fail-message--contact {
-    transform: translate(0rem, 73rem);
+    transform: translate(0rem, 72.75rem);
   }
 
   .form__success-message--contact {
-    transform: translate(0rem, 73rem);
+    transform: translate(0rem, 72.75rem);
   }
 
   .sponsor__item {

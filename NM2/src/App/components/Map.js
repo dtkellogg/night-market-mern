@@ -22,7 +22,7 @@ export default function Map() {
           }
           mapStyle={"mapbox://styles/dtkellogg/ckeisrodw1jfy19uqag1jvobo"}
           onViewportChange={(viewport) => setViewport(viewport)}
-          // scrollZoom={false}
+          scrollZoom={false}
           // zoomEnabled={false}
           // rotateEnabled={false}
           // touchZoomRotate={false}
