@@ -2154,8 +2154,10 @@ a:nth-child(2) {
   }
 
   .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/svg/hero.svg);
+      background-size: contain;
     height: 140vh;
-    padding-bottom: 10rem;
+    padding: 15rem 0;
   }
 
   .sponsor__list {
@@ -2167,8 +2169,6 @@ a:nth-child(2) {
   }
 
   .footer {
-    height: 70vh;
-    
     grid-template-rows: 7rem repeat(3, 1fr) 3rem;
     grid-template-columns: repeat(4, 1fr);
     position: relative;
