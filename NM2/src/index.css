@@ -2165,7 +2165,7 @@ a:nth-child(2) {
   }
 
   .header {
-    transform: translateY(52%);
+    transform: translateY(62%);
   }
 
   .team__img {
@@ -2220,6 +2220,14 @@ a:nth-child(2) {
 }
 
 @media (max-width: 450px) {
+  .about-page {
+    height: 600vh;
+  }
+
+  .wavy-div-content:nth-child(1) {
+    transform: translateY(1rem);
+  }
+
   .footer {
     height: 115rem;
   }
