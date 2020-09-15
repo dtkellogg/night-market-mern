@@ -2109,6 +2109,11 @@ a:nth-child(2) {
     width: 100%;
     justify-content: space-evenly;
   }
+
+  .map__overlay {
+    /* height: 35vh; */
+    transform: translateY(31.5rem);
+  }
 }
 
 @media (max-width: 550px) {
