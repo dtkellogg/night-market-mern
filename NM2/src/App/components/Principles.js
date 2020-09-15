@@ -33,7 +33,7 @@ export default function Principle() {
             />
           {/* </div> */}
         </div>
-        <div className="principles__item">
+        <div className="principles__item principles__item--2">
           <img
             src={Principle2}
             alt="Principle Pic"

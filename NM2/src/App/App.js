@@ -51,6 +51,7 @@ export default function App() {
             </TransitionGroup>
           </React.Suspense>
         </div>
+        <div className="map__overlay" />
         <Map />
         <Footer className="footer" />
       </div>

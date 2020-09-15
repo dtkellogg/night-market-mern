@@ -1,6 +1,3 @@
-const friends = ["tom", "bob", "jim"];
-export default friends;
-
 export const sponsors = [
   {
     name: "Dickeys",
