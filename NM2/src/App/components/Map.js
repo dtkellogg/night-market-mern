@@ -9,7 +9,7 @@ export default function Map() {
       width: "100vw",
       height: "100vh",
       zoom: 14.5,
-    });  
+    });
 
     console.log(`mapbox token: ${process.env.REACT_APP_MAPBOX_TOKEN}`)
 
@@ -22,11 +22,14 @@ export default function Map() {
           }
           mapStyle={"mapbox://styles/dtkellogg/ckeisrodw1jfy19uqag1jvobo"}
           onViewportChange={(viewport) => setViewport(viewport)}
-          // scrollZoom={false}
-          // zoomEnabled={false}
-          // rotateEnabled={false}
-          // touchZoomRotate={false}
+          scrollZoom={false}
+          zoomEnabled={false}
+          rotateEnabled={false}
+          zoomScroll={false}
+          touchZoomRotate={false}
+          dragRotate={false}
           dragPan={false} // This disable moving around the map w 1 finger on mobile
+          doubleClickZoom={false}
           // drag={false}
           // userInteractionEnabled={'NO'}
           // showCompass={true}
