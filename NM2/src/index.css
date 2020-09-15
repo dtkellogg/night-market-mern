@@ -2224,11 +2224,11 @@ a:nth-child(2) {
     }
 
   .involved__item:nth-child(2) {
-      transform: translateY(-2rem);
+      transform: translateY(0rem);
   }
 
   .involved__item:nth-child(3) {
-      transform: translateY(-6rem);
+      transform: translateY(-3rem);
   }
 
   .hero__text-box-btns {
