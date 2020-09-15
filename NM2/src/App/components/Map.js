@@ -31,7 +31,7 @@ export default function Map() {
           dragPan={false} // This disable moving around the map w 1 finger on mobile
           doubleClickZoom={false}
           // drag={false}
-          // userInteractionEnabled={'NO'}
+          userInteractionEnabled={false}
           // showCompass={true}
         >
           <Marker latitude={38.546731} longitude={-121.749011}>
