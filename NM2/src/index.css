@@ -1713,7 +1713,7 @@ a:nth-child(2) {
     width: 95%;
   }
 
-  /* ------------about page------------ */
+  /* ------------contact page------------ */
   .form__content {
     padding: 0
   }
@@ -1804,6 +1804,12 @@ a:nth-child(2) {
 
   .map {
     height: 90vh;
+  }
+
+  .btn__contact {
+    transform: translateY(-2rem);
+    height: 7rem;
+    z-index: 9999;
   }
 
 }
@@ -1983,13 +1989,11 @@ a:nth-child(2) {
     flex-direction: column;
   }
 
-   .principles__item:nth-child(3)
-   {
+   .principles__item:nth-child(3) {
       transform: translateY(-8rem);
   }
 
-     .principles__item:nth-child(4)
-   {
+     .principles__item:nth-child(4) {
       transform: translateY(-19rem);
   }
 
