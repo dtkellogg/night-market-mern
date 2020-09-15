@@ -1870,15 +1870,15 @@ a:nth-child(2) {
   }
 
   .team__members {
-    padding: 2rem 0 15rem 0;
+    padding: 3.25rem 0 15rem 0;
   }
 
   .media {
-    padding: 2rem 0 45rem 0;
+    padding: 3.25rem 0 45rem 0;
   }
 
   .about {
-    padding: 2rem 0 0 0 ;
+    padding: 3.25rem 0 0 0 ;
   }
 }
 

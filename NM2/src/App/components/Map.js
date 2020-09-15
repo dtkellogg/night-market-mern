@@ -22,14 +22,14 @@ export default function Map() {
           }
           mapStyle={"mapbox://styles/dtkellogg/ckeisrodw1jfy19uqag1jvobo"}
           onViewportChange={(viewport) => setViewport(viewport)}
-          scrollZoom={false}
-          zoomEnabled={false}
-          rotateEnabled={false}
-          touchZoomRotate={false}
+          // scrollZoom={false}
+          // zoomEnabled={false}
+          // rotateEnabled={false}
+          // touchZoomRotate={false}
           dragPan={false} // This disable moving around the map w 1 finger on mobile
-          drag={false}
-          userInteractionEnabled={'NO'}
-          showCompass={true}
+          // drag={false}
+          // userInteractionEnabled={'NO'}
+          // showCompass={true}
         >
           <Marker latitude={38.546731} longitude={-121.749011}>
             <div className="text-size-2">Davis Night Market</div>
