@@ -21,7 +21,7 @@ export default function Map() {
             "pk.eyJ1IjoiZHRrZWxsb2dnIiwiYSI6ImNrZWlzMW9jNDAwYW8yenBmcHM4azQ1NGUifQ.z29ERW4wAUvbgQkoa7By1A"
           }
           mapStyle={"mapbox://styles/dtkellogg/ckeisrodw1jfy19uqag1jvobo"}
-          onViewportChange={(viewport) => setViewport(viewport)}
+          // onViewportChange={(viewport) => setViewport(viewport)}
           scrollZoom={false}
           zoomEnabled={false}
           rotateEnabled={false}
