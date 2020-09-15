@@ -1810,6 +1810,10 @@ a:nth-child(2) {
     height: 70rem;
   }
 
+  .btn__contact {
+    overflow: visible;
+  }
+
 }
 
 @media (max-width: 850px) {
