@@ -753,7 +753,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: space-between;
-  margin-top: 1rem;
+  margin: 1rem 0 10rem 0;
   width: 100%;
 }
 
@@ -1812,10 +1812,6 @@ a:nth-child(2) {
 
   .btn__contact {
     overflow: visible;
-  }
-
-  .btn__contact {
-    margin: 5rem 0 0 3rem;
   }
 
 }
