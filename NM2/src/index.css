@@ -2224,7 +2224,7 @@ a:nth-child(2) {
     }
 
   .involved__item:nth-child(2) {
-      transform: translateY(0rem);
+      transform: translateY(-0.5rem);
   }
 
   .involved__item:nth-child(3) {
