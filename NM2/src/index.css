@@ -1715,7 +1715,7 @@ a:nth-child(2) {
 
   /* ------------contact page------------ */
   .form__content {
-    padding: 0
+    padding: 0 0 20rem 0;
   }
 
   .form__fail-message--contact {
