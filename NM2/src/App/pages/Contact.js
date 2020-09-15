@@ -108,7 +108,7 @@ export default function Contact() {
           <input
             type="email"
             className="form__input form__input-contact"
-            placeholder="Your email address"
+            placeholder="Your email address ☆✴︎★"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
