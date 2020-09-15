@@ -1818,6 +1818,8 @@ a:nth-child(2) {
 
   .map {
     height: 160vh;
+    transform: translateY(30rem);
+    overflow: hidden;
   }
 
   .map__overlay {
