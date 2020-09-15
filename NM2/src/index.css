@@ -1817,11 +1817,11 @@ a:nth-child(2) {
   }
 
   .map {
-    height: 90vh;
+    height: 120vh;
   }
 
   .map__overlay {
-    height: 90vh;
+    height: 120vh;
     transform: translateY(36rem);
   }
 
