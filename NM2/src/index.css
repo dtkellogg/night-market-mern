@@ -2325,7 +2325,19 @@ a:nth-child(2) {
   }
 
   .about-page {
-    height: 790vh;
+    height: 770vh;
+  }
+
+  .sponsors {
+    padding: 0 0 15rem 0;
+  }
+
+  .sponsor__list {
+    padding: 0 2rem;
+  }
+
+  .involved__items-container {
+    height: 250vh;
   }
 }
 
@@ -2417,17 +2429,15 @@ a:nth-child(2) {
     height: 52.5rem;
 }
 
-.principles__item:nth-child(4)
- {
-    padding: 12rem 0;
-    flex-direction: column;
-}
+  .principles__item:nth-child(4) {
+      padding: 12rem 0;
+      flex-direction: column;
+  }
 
-  .principles__item:nth-child(3)
- {
+  .principles__item:nth-child(3) {
     padding: 21rem 0 0 0;
     flex-direction: column;
-}
+  }
 
   .about-page {
     height: 790vh;
