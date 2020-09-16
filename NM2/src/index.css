@@ -31,6 +31,10 @@
   --twitter: #1dcaff;
 }
 
+.stripe__element {
+  width: 30rem;
+}
+
 .video {
   width: 60rem;
   height: 60rem;
@@ -2420,6 +2424,10 @@ a:nth-child(2) {
     padding: 21rem 0 0 0;
     flex-direction: column;
 }
+
+  .about-page {
+    height: 690vh;
+  }
 
   /* .involved__item {
     height: 50.33vh;
