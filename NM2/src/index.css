@@ -2347,6 +2347,10 @@ a:nth-child(2) {
   .form {
     padding: 5rem 1.5rem 82rem 1.5rem;
   }
+
+  .invovled__item {
+    height: 70vh;
+  }
 }
 
 @media (max-width: 350px) {
@@ -2463,5 +2467,6 @@ a:nth-child(2) {
 1200px - 1800px: Standard desktop
 1800px+: big desktop 
 
-iphone 11 ~ 440px ... actually 425px ....
+iphone 11 ~ 440px ... actually < 425px ....
+iphone 7 < 400px
 */
