@@ -1,15 +1,11 @@
 import React from "react";
 import { members, sponsors } from "../../data.js";
-// import Sidebar from "./Sidebar";
-// import Helena from '../img/team/Helena.webp'
+
 
 export default function Team() {
+
   return (
     <div className="team">
-      {/* <Sidebar
-        title="Team Members"
-        list={members.map((member) => member.name)}
-      /> */}
       <div className="team__members">
         <div className="team__header">
           <h2 className="text-size-2 light-yellow letter-spacing-lg">Meet the Team</h2>
