@@ -120,8 +120,10 @@ export default function Footer() {
             4th St. & C St. Davis, CA
           </h4>
         </div>
+
         <Newsletter />
       </div>
+
       <div className="legal_and_social_media_links">
         <div className="legal">
           <span className="legal text-size-5">
@@ -130,6 +132,7 @@ export default function Footer() {
           <span className="legal text-size-5">All rights reserved.</span>
         </div>
       </div>
+
       <img src={logo} alt="logo" className="footer__logo" />
     </div>
   );

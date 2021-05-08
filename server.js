@@ -8,7 +8,28 @@ const exphbs = require("express-handlebars");
 const cors = require("cors")
 const { v4: uuid } = require("uuid");
 const connectDB = require("./db/db")
-// const stripe = require("stripe")(stripe_key);
+const stripe_key = process.env.STRIPE_KEY;
+
+
+
+// Stipe Donation Test
+const stripeTest = async function () {
+try {
+  const stripe = require("stripe")("sk_test_51GjtWQCwzCUfmkjvVnxP83gFvV8sRv63YXxsMueEwZmlDjTNtgmnNyCDw50M83qsQOrma25eHhYHmgRUkZmdh53O00hIVZ6v78");
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: 1477, // $14.77, an easily identifiable amount
+    currency: 'usd',
+  });
+  console.log('Worked! ', paymentIntent.id);
+} catch(err) {
+  console.log('Error! ', err.message);
+}
+}
+
+stripeTest()
+
+
+
 
 // // Load environment variables
 // require('dotenv').config({ path: './config/config.env'});
@@ -71,11 +92,12 @@ app.use('/api/v1/subscribers', require('./routes/subscribers'))
 //// Stripe
 
 // const { v4: uuid } = require("uuid");
-const stripe_key = process.env.STRIPE_KEY;
+// const stripe_key = process.env.STRIPE_KEY;
 // const Stripe = require("../models/Stripe");
 
 // const stripe = process.env.STRIPE_KEY;
-const stripe = require("stripe")(stripe_key);
+
+// const stripe = require("stripe")(stripe_key);
 
 // middleware
 app.use(express.json());

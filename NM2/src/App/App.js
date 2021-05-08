@@ -13,8 +13,8 @@ console.log(`Mapbox Taken (app.js reactside): ${process.env.MAPBOX_TOKEN}`)
 
 // import group from "./img/svg/group.svg";
 
-const About = React.lazy(() => import("./pages/About"));
 const Home = React.lazy(() => import("./pages/Home"));
+const About = React.lazy(() => import("./pages/About"));
 const Media = React.lazy(() => import("./pages/Media"));
 const Team = React.lazy(() => import("./pages/Team"));
 const Contact = React.lazy(() => import("./pages/Contact"));
