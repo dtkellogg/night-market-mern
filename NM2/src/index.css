@@ -1361,7 +1361,7 @@ a:nth-child(2) {
   z-index: 1;
 }
 
-.stars {
+/* .stars {
   background: var(--black) url(./img/background/stars.png) repeat top center;
   z-index:0;
 }
@@ -1377,7 +1377,7 @@ a:nth-child(2) {
   z-index:2;
   opacity: .4;
   animation:move-clouds-back 200s linear infinite;
-}
+} */
 
 /* ----------------------------------------- */
 /* ------------Scroll Btn------------ */
