@@ -7,11 +7,6 @@ import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import Map from "./components/Map";
 
-// require('dotenv').config();
-
-console.log(`Mapbox Taken (app.js reactside): ${process.env.MAPBOX_TOKEN}`)
-
-// import group from "./img/svg/group.svg";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const About = React.lazy(() => import("./pages/About"));

@@ -1,7 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import logoMain from "../../img/svg/logo_main.svg";
-// import logoMain2 from "../../img/svg/logo_main_orange.svg";
 import Stripe from "../components/Stripe";
 
 export default function Home() {
