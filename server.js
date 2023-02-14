@@ -13,20 +13,20 @@ const stripe_key = process.env.STRIPE_KEY;
 
 
 // Stipe Donation Test
-const stripeTest = async function () {
-try {
-  const stripe = require("stripe")("sk_test_51GjtWQCwzCUfmkjvVnxP83gFvV8sRv63YXxsMueEwZmlDjTNtgmnNyCDw50M83qsQOrma25eHhYHmgRUkZmdh53O00hIVZ6v78");
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: 1477, // $14.77, an easily identifiable amount
-    currency: 'usd',
-  });
-  console.log('Worked! ', paymentIntent.id);
-} catch(err) {
-  console.log('Error! ', err.message);
-}
-}
+// const stripeTest = async function () {
+// try {
+//   const stripe = require("stripe")("sk_test_51GjtWQCwzCUfmkjvVnxP83gFvV8sRv63YXxsMueEwZmlDjTNtgmnNyCDw50M83qsQOrma25eHhYHmgRUkZmdh53O00hIVZ6v78");
+//   const paymentIntent = await stripe.paymentIntents.create({
+//     amount: 1477, // $14.77, an easily identifiable amount
+//     currency: 'usd',
+//   });
+//   console.log('Worked! ', paymentIntent.id);
+// } catch(err) {
+//   console.log('Error! ', err.message);
+// }
+// }
 
-stripeTest()
+// stripeTest()
 
 
 
@@ -103,39 +103,39 @@ app.use('/api/v1/subscribers', require('./routes/subscribers'))
 app.use(express.json());
 
 
-app.post("/api/v1/stripe", (req, res) => {
-  // console.log(`In stripe backend ${req.body} and ${req.body[0]}`);
-  const { product, token } = req.body;
-  console.log("PRODUCT", product);
-  console.log("PRICE", product.price);
-  const idempontencyKey = uuid();
+// app.post("/api/v1/stripe", (req, res) => {
+//   // console.log(`In stripe backend ${req.body} and ${req.body[0]}`);
+//   const { product, token } = req.body;
+//   console.log("PRODUCT", product);
+//   console.log("PRICE", product.price);
+//   const idempontencyKey = uuid();
 
-  return stripe.customers
-    .create({
-      email: token.email,
-      source: token.id,
-    })
-    .then((customers) => {
-      stripe.charges.create(
-        {
-          amount: product.price * 100,
-          currency: "usd",
-          customer: customers.id,
-          receipt_email: token.email,
-          description: `purchase of ${product.name}`,
-          shipping: {
-            name: token.card.name,
-            address: {
-              country: token.card.address_country,
-            },
-          },
-        },
-        { idempontencyKey }
-      );
-    })
-    .then((result) => res.status(200).json(result))
-    .catch((err) => console.log(err));
-});
+//   return stripe.customers
+//     .create({
+//       email: token.email,
+//       source: token.id,
+//     })
+//     .then((customers) => {
+//       stripe.charges.create(
+//         {
+//           amount: product.price * 100,
+//           currency: "usd",
+//           customer: customers.id,
+//           receipt_email: token.email,
+//           description: `purchase of ${product.name}`,
+//           shipping: {
+//             name: token.card.name,
+//             address: {
+//               country: token.card.address_country,
+//             },
+//           },
+//         },
+//         { idempontencyKey }
+//       );
+//     })
+//     .then((result) => res.status(200).json(result))
+//     .catch((err) => console.log(err));
+// });
 
 ///////////////
 
